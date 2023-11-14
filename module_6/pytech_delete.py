@@ -1,7 +1,7 @@
-#Pascual Villar
-#CYBR410-305J
-#Assignment: Module 6.3 (PyTech: Deleting Documents)
-#November 14, 2023
+# Pascual Villar
+# CYBR410-305J
+# Assignment: Module 6.3 (PyTech: Deleting Documents)
+# November 14, 2023
 
 from pymongo import MongoClient
 
