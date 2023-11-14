@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-# MongoDB client database URL (Ensure this is secure and not exposed)
+# MongoDB client database URL 
 url = "mongodb+srv://hsv8962:Makework90$@cluster0.dbcpngp.mongodb.net/"
 
 # Establish a connection to the client database
