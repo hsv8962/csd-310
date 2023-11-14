@@ -1,9 +1,9 @@
 from pymongo import MongoClient
 
-# Your MongoDB URL
+# MongoDB URL
 url = "mongodb+srv://hsv8962:Makework90$@cluster0.dbcpngp.mongodb.net/"
 
-# Establish a connection to the MongoDB server
+# Connection to the MongoDB server
 client = MongoClient(url)
 
 # Connect to the pytech database and the students collection
