@@ -1,3 +1,7 @@
+#Pascual Villar
+#CYBR410-305J
+#Assignment: Module 6.2 (PyTech: Updating Documents)
+
 from pymongo import MongoClient
 
 # MongoDB client database URL 
