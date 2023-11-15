@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-url = "mongodb+srv://hsv8962:Makework90$@cluster0.dbcpngp.mongodb.net/"
+url = "mongodb+srv://admin:admin@cluster0.dbcpngp.mongodb.net/"
 client = MongoClient(url)
 db = client.pytech
 print("---PyTech Collection List----")
