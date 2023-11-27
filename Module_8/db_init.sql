@@ -1,45 +1,38 @@
+# Pascual B. Villar
+# CYBR410-305J
+# Assignment 8.2 PySports Setup
+# November 26, 2023
+
 USE pysports;
 SHOW TABLES;
 
-# create pysports_user and grant them all priviledges to the pysports database
-CREATE USER 'pysports_user'@'localhost' IDENTIFIED WITH mysql_native_password BY Makework90$;
-
-# grant all priviledges to the pysports database to user pysports user on localhost
-GRANT ALL PRIVILEDGES ON pysports.* TO'pysports_user'@'localhost';
-
-# drop test user if exists
+# Drop user and tables if they exist (to be run before creating them)
 DROP USER IF EXISTS 'pysports_user'@'localhost';
+DROP TABLE IF EXISTS player;
+DROP TABLE IF EXISTS team;
 
-DROP TABLE IS EXISTS team;
+# Create user and grant privileges
+CREATE USER 'pysports_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Makework90$';
+GRANT ALL PRIVILEGES ON pysports.* TO 'pysports_user'@'localhost';
 
-# create the team table
+# Create the team table
 CREATE TABLE team (
-    team_id INT
-    team_name VARCHAR(75) NOT NULL AUTO_INCREMENT,
-    mascot    VARCHAR(75) NOT NULL,
+    team_id INT NOT NULL AUTO_INCREMENT,
+    team_name VARCHAR(75) NOT NULL,
+    mascot VARCHAR(75) NOT NULL,
     PRIMARY KEY(team_id)
 );
 
-# create the player table and set the foreign key
+# Create the player table and set the foreign key
 CREATE TABLE player (
     player_id INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(75) NOT NULL,
     last_name VARCHAR(75) NOT NULL,
     team_id INT NOT NULL,
-    PRIMARY KEY (player_id)
-    CONSTRAINT fk_team
-    FOREIGN KEY (team_id)
-        REFERENCES team(team_id)
+    PRIMARY KEY (player_id),
+    CONSTRAINT fk_team FOREIGN KEY (team_id) REFERENCES team(team_id)
 );
 
-# insert tean records
-INSERT INTO team (team_name, mascot)
-VALUES ('Team Gandalf', 'White Wizards')
-INSERT INTO team (team_name, mascot)
-VALUES ('Team Sauron', 'Orcs');
-
-# drop table if they are present
-DROP TABLE IF EXISTS player;
-SELECT team_id FROM team WHERE team_name = 'Team Sauron';
-
-
+# Insert team records
+INSERT INTO team (team_name, mascot) VALUES ('Team Gandalf', 'White Wizards');
+INSERT INTO team (team_name, mascot) VALUES ('Team Sauron', 'Orcs');
