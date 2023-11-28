@@ -1,6 +1,8 @@
 # Pascual B. Villar
 # CYBR410-305J
 # Assignment: PySports_update
+# November 26, 2013
+
 import mysql.connector
 
 # Connect to the MySQL database
