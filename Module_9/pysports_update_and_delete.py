@@ -1,3 +1,9 @@
+# Pascual B. Villar
+# CYBR410-305J
+# Module 9.3 Assignment: PySport (Update & Delete)
+# December 3, 2023
+
+
 import mysql.connector
 
 # Connect to the MySQL database
