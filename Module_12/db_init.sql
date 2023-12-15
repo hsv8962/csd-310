@@ -1,4 +1,4 @@
--- Active: 1701832513754@@127.0.0.1@3306@whatabook
+
 # Pascual B. Villar
 # CYBR410-305J
 # Assignment 10.3 WhatABook Database and Table Creation
